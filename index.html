@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./image/img.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tap Taupe</title>
+</head>
+<body>
+    <nav class="title">
+        <img src="./image/img.png" alt="">
+        <h1>TAP'TAUPE</h1>
+    </nav>
+    <main>
+        <div class="top">
+            <button class="start-game">Start game</button>
+
+            <div class="infos">
+                <span>Player<span class="nom">---</span></span>
+                <span>Mode<span class="niveau">---</span></span>
+                <span class="timer">60'</span>
+            </div>
+            
+        </div>
+        <section class="container">
+       
+        <div class="hole"><img src="./image/img.png" alt=""></div>
+        <div class="hole"><img src="./image/img.png" alt=""></div>
+        <div class="hole"><img src="./image/img.png" alt=""></div>
+        <div class="hole"><img src="./image/img.png" alt=""></div>
+        <div class="hole"><img src="./image/img.png" alt=""></div>
+        <div class="hole"><img src="./image/img.png" alt=""></div>
+        <div class="hole"><img src="./image/img.png" alt=""></div>
+        <div class="hole"><img src="./image/img.png" alt=""></div>
+        <div class="hole"><img src="./image/img.png" alt=""></div>
+
+        <div id="score-container">Score : <span id="score">0</span></div>
+    </section>
+    </main>
+    <footer class="title">
+        <img src="./image/img.png" alt="">
+        <h1>TAP'TAUPE</h1>
+    </footer>
+
+    <div class="backdrop"> 
+        <div class="modal">
+            <h2>Nouvelle partie</h2>
+            <form>
+                <div class="form-control">
+                    <label>Votre pseudo</label>
+                    <input type="text" required/>
+                </div>
+                <div class="form-control">
+                    <label>Niveau de jeu</label>
+                    <select required>
+                        <option value="Easy">
+                            Easy
+                        </option>
+                        <option value="Medium">
+                            Medium
+                        </option>
+                        <option value="Hard">
+                            Hard
+                        </option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <input type="submit" value="Jouer">
+
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</script>
+<script src="./index.js"></script>
+</html>

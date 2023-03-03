@@ -1,0 +1,249 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Rampart+One&family=Rubik+Iso&family=Titan+One&display=swap');
+
+/* font-family: 'Climate Crisis', cursive;
+
+font-family: 'Rampart One', cursive;
+
+font-family: 'Rubik Iso', cursive;
+
+font-family: 'Titan One', cursive;
+ */
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Titan One', cursive;
+    color: white;
+}
+
+.title{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #15151539
+}
+
+.title img{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+
+}
+
+h1{
+    margin: 20px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+
+}
+
+body{
+    min-width: 370px;
+    margin : 0;
+    background: url('https://img.freepik.com/free-vector/seamless-textured-grass-natural-grass-pattern_172107-1308.jpg?w=2000'); 
+    background-size: 50%;
+}
+
+main{
+    height: 80vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+button{
+    padding: 10px;
+    background: transparent;
+    border: #fff 5px solid;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+    margin : 10px  0;
+    cursor: pointer;
+    transition: 1s;
+    width: 33%;
+    min-width: fit-content;
+}
+
+button:hover{
+    background: #fff;
+    border: #fff 5px solid;
+    color: #90c290;
+}
+
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding:0 0;
+    margin: 0 auto;
+    padding: 50px 50px;
+    border-radius: 20px;
+    position: relative;
+    border: 5px solid white;
+}
+
+.container .hole{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 30%;
+    margin: 1%;
+    height: 150px;
+    border-radius: 80px;
+    background: rgba(113, 90, 0, 0.153); 
+}
+
+.hole img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#score-container{
+    position: absolute;
+    bottom : 7px;
+    right: 15px;
+    font-size: 25px;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    font-size: 20px;
+}
+
+.infos{
+    display: flex;
+    justify-content: space-between;
+    min-width: fit-content;
+    width: 100%;
+}
+
+.infos > span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    margin: 10px 0;
+    text-align: center;
+    width: 33%;
+}
+
+.infos > span > span {
+    font-size: 20px;
+}
+
+.infos > span.timer{
+
+    text-align: start;
+    font-size: 25px;
+}
+
+.backdrop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000000c1;
+    height: 100%;
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    border-radius: 25px;
+    max-width: 600px;
+    background: rgb(255, 255, 255);
+    padding: 5%;
+}
+
+.modal h2{
+   color: #85ca36;
+
+   font-size: 30px;
+}
+
+.modal label{
+    font-size: 20px;
+    color: rgb(22, 22, 22) ;
+ }
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    color: rgb(22, 22, 22) ;
+
+}
+
+.form-control input, .form-control select  {
+    height: 40px;
+    margin: 5px 0;
+    font-family: sans-serif;
+    color: rgb(22, 22, 22) ;
+
+}
+
+.form-control input[type="submit"]  {
+
+    background: transparent;
+    border: #000000 1px solid;
+    color: #000000;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: 800ms;
+   min-width: fit-content;
+   
+}
+
+
+.form-control input[type="submit"]:hover{
+    box-shadow: inset 500px 0 50px #85ca36;
+    border: #85ca36 3px solid;
+    color: #fff;
+}
+
+.score-final{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score-final  span:last-child{
+    font-size: 25px;
+}
+@media (max-width:500px){
+    .container{
+
+        width: 95%;
+        padding: 50px 5px;
+    }
+    .container .hole{
+        height: 120px;
+    }
+}
