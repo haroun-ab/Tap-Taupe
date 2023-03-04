@@ -30,7 +30,9 @@ $(document).ready(function(){
         $('.start-game').css( "background", "transparent")
         $('.start-game').css( "color", "white")
         $('.start-game').css( "fontSize", "20px")
+        $('.start-game').css( "cursor", "initial")
         $('.start-game').attr("disabled", "disabled")
+
        
         //timer
        $('.timer').html(`${time}'`)
@@ -48,11 +50,11 @@ $(document).ready(function(){
                         if(data['niveau'] == 'Easy'){
                             moleAnimDelay = 500
                         } else if(data['niveau'] == 'Medium'){
-                            moleAnimDelay = 375
+                            moleAnimDelay = 400
                         } else{
-                            moleAnimDelay = 250
+                            moleAnimDelay = 300
                         }
-                        a(hole, moleAnimDelay)
+                        molePopping(hole, moleAnimDelay)
                     }
                     $('.timer').html(`${time}'`)
                     console.log(time)
@@ -90,7 +92,7 @@ $(document).ready(function(){
     return score;
    }
 
-   function a(hole, delay){
+   function molePopping(hole, delay){
     let random = Math.floor(Math.random() * 9);
     const imgToMov = $(hole[random]).find("img");
     imgToMov.show(delay).hide(delay)
