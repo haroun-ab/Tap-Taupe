@@ -7,13 +7,20 @@
 }
 
 .title{
-    height: 10vh;
+    background: #15151539;
+    position: relative;
+    z-index: 100;
+}
+
+.nav-container{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #15151539;
+    height: 10vh;
+    max-width: 1450px;
+    margin: auto;
     position: relative;
-    z-index: 1;
+  
 }
 
 .title img{
@@ -21,6 +28,34 @@
     height: 40px;
     margin-right: 5px;
 }
+
+nav button{
+    position: absolute;
+    right: 0;
+    border: #fff 3px solid;
+    background: none;
+    padding: 5px ;
+    border-radius: 10px;
+    transition: 500ms;
+    cursor: pointer;
+    margin: 10px;
+}
+
+nav button i{
+    color: transparent;
+    color: #fff;
+    font-size: 35px;
+    transition: 500ms;
+}
+
+nav button:hover{
+    background: #fff;
+}
+
+nav button:hover > i{
+    color: #85ca36;
+}
+
 
 h1{
     margin: 20px 0;
@@ -34,7 +69,7 @@ h1{
 body{
     min-width: 370px;
     margin : 0;
-    background: url('https://img.freepik.com/free-vector/seamless-textured-grass-natural-grass-pattern_172107-1308.jpg?w=2000'); 
+    background: url('./image/bg-whackamole.avif'); 
     background-size: 50%;
 }
 
@@ -48,7 +83,118 @@ main{
     margin: auto;
 }
 
-button{
+/*Leaderboard*/
+#leaderboard.backdrop{
+    background: rgba(0, 0, 0, 0.43) ;
+    z-index: 10000;
+}
+
+#leaderboard .modal{
+    max-width: 1200px;
+}
+
+#leaderboard h2 {
+    margin-bottom: 50px;
+}
+
+#leaderboard h2 i{
+    font-size: 40px;
+    color: #e2db04;
+}
+
+button#close{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: 0;
+    background: none;
+    padding: 2px 10px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+
+button#close i {
+    color: red;
+    font-size: 30px;
+}
+
+button#close:hover> i{
+    color: rgb(131, 0, 0)
+}
+
+.leaderboards{
+    display: flex;
+}
+
+.leaderboards h3{
+    padding: 10px;
+    margin: 0;
+    background: #85ca36;
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+
+.leaderboard{
+    text-align: center;
+}
+
+.lb-container{
+    width: 33%;
+    background: #eeeeee;
+}
+
+.lb-container:nth-child(2) {
+    border-left: 10px #ffffff solid ;
+    border-right: 10px #ffffff solid ;
+}
+
+.leaderboard .user-score{
+    display: flex;
+   background: #e3ffc9;
+   border-top: 2px solid white ;
+}
+
+.leaderboard .user-score:nth-child(odd){
+    background: #eeeeee;
+}
+
+.leaderboard .user-score span{
+    padding: 10px 0;
+    margin: 0;
+}
+
+.leaderboard .user-score span:nth-child(1){
+   width: 15%;
+    border-right: 2px solid white;
+}
+
+.leaderboard .user-score span:nth-child(2){
+    width: 70%;
+    text-align: start;
+    margin: 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }
+
+ .leaderboard .user-score span:nth-child(3){
+    width: 15%;
+    border-left: 2px solid white;
+ }
+ 
+
+.leaderboards span{
+    color: black;
+    margin: 10px;
+    font-size: 15px;
+}
+
+
+
+/*Game*/
+
+button.start-game, button.play-again{
     padding: 10px;
     background: transparent;
     border: #fff 5px solid;
@@ -62,7 +208,8 @@ button{
     min-width: fit-content;
 }
 
-button:hover{
+button.start-game:hover,
+button.play-again:hover{
     background: #fff;
     border: #fff 5px solid;
     color: #90c290;
@@ -92,7 +239,10 @@ button:hover{
     margin: 1%;
     height: 150px;
     border-radius: 80px;
-    background: rgba(113, 90, 0, 0.153); 
+    background: url('http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/e3b41127ef742ce.png'); 
+    background-size: 100%;
+    background-position-y: 80% ;
+    background-repeat: no-repeat;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
     -moz-user-select: none;
@@ -128,29 +278,31 @@ button:hover{
 }
 
 .infos{
+  
     display: flex;
-    justify-content: space-between;
     min-width: fit-content;
-    width: 100%;
+    width: 90%;
 }
 
 .infos > span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 13px;
+    font-size: 10px;
     margin: 10px 0;
     text-align: center;
     width: 33%;
 }
 
+
 .infos > span > span {
-    font-size: 17px;
+    font-size: 14px;
 }
 
 .infos > span.timer{
     text-align: start;
     font-size: 25px;
+    padding-left: 10px;
 }
 
 .backdrop{
@@ -229,9 +381,46 @@ button:hover{
 .score-final  span:last-child{
     font-size: 25px;
 }
-@media (max-width:500px){
-    .container{
 
+@media (max-width:768px){
+    
+    /*leaderboard*/
+
+    .infos > span:nth-child(1) {
+        width: 50%;
+        margin-right: 15px ;
+
+    }
+
+    .infos > span:nth-child(2) {
+        width: 30%;
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
+    }
+
+    .infos > span:nth-child(3) {
+        width: 20%;
+        margin-left: 15px ;
+    }
+    
+    #leaderboard h2 {
+        text-align: center;
+    }
+    
+    .leaderboards{
+        flex-direction: column;
+    }
+    
+    .lb-container{
+        width: 100%;
+        background: #eeeeee;
+        border: none !important;
+        margin-bottom: 30px ;
+    }
+}
+
+@media (max-width:600px){
+    .container{
         width: 95%;
         padding: 50px 5px;
     }
@@ -239,3 +428,4 @@ button:hover{
         height: 120px;
     }
 }
+

@@ -11,8 +11,11 @@
 </head>
 <body>
     <nav class="title">
-        <img src="./image/img.png" alt="">
-        <h1>TAP'TAUPE</h1>
+        <div class="nav-container">
+            <img src="./image/img.png" alt="">
+            <h1>TAP'TAUPE</h1>
+            <button id="leaderboard-btn"><i class="fa-solid fa-trophy"></i></button>
+        </div>
     </nav>
     <main>
         <div class="top">
@@ -26,26 +29,28 @@
             
         </div>
         <section class="container">
-       
-        <div class="hole"><img src="./image/img.png" alt="" draggable="false"></div>
-        <div class="hole"><img src="./image/img.png" alt="" draggable="false"></div>
-        <div class="hole"><img src="./image/img.png" alt="" draggable="false"></div>
-        <div class="hole"><img src="./image/img.png" alt="" draggable="false"></div>
-        <div class="hole"><img src="./image/img.png" alt="" draggable="false"></div>
-        <div class="hole"><img src="./image/img.png" alt="" draggable="false"></div>
-        <div class="hole"><img src="./image/img.png" alt="" draggable="false"></div>
-        <div class="hole"><img src="./image/img.png" alt="" draggable="false"></div>
-        <div class="hole"><img src="./image/img.png" alt="" draggable="false"></div>
+            <div class="hole"><img src="./image/mole.png" alt="" draggable="false"></div>
+            <div class="hole"><img src="./image/mole.png" alt="" draggable="false"></div>
+            <div class="hole"><img src="./image/mole.png" alt="" draggable="false"></div>
+            <div class="hole"><img src="./image/mole.png" alt="" draggable="false"></div>
+            <div class="hole"><img src="./image/mole.png" alt="" draggable="false"></div>
+            <div class="hole"><img src="./image/mole.png" alt="" draggable="false"></div>
+            <div class="hole"><img src="./image/mole.png" alt="" draggable="false"></div>
+            <div class="hole"><img src="./image/mole.png" alt="" draggable="false"></div>
+            <div class="hole"><img src="./image/mole.png" alt="" draggable="false"></div>
+
 
         <div id="score-container">Score : <span id="score">0</span></div>
     </section>
     </main>
     <footer class="title">
-        <img src="./image/img.png" alt="">
-        <h1>TAP'TAUPE</h1>
+        <div class="nav-container">
+            <img src="./image/img.png" alt="">
+            <h1>TAP'TAUPE</h1>
+        </div>
     </footer>
 
-    <div class="backdrop"> 
+    <div id="home" class="backdrop"> 
         <div class="modal">
             <h2>Nouvelle partie</h2>
             <form>
@@ -72,6 +77,32 @@
                 </div>
             </form>
         </div>
+    </div>
+
+    <div id="leaderboard" class="backdrop"> 
+        <div class="modal">
+            <button id="close"><i class="fa-solid fa-xmark"></i></i></button>
+            <h2><i class="fa-solid fa-trophy"></i> Learderboard</h2>
+            <div class="leaderboards">
+                <div class="lb-container">
+                    <h3>Easy</h3>
+                    <div id="Easy" class="leaderboard">
+                    </div>
+                </div>
+                <div class="lb-container">
+                    <h3>Medium</h3>
+                    <div id="Medium" class="leaderboard">
+                    </div>
+                </div>
+                <div class="lb-container">
+                    <h3>Hard</h3>
+                    <div id="Hard" class="leaderboard">
+
+                    </div>
+                </div>
+            </div>
+   
+        </button>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
