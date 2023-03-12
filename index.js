@@ -55,11 +55,11 @@ $(document).ready(function(){
                     const data = JSON.parse(localStorage.getItem('user'))
                     if(time % 2 == 0){
                         if(data['niveau'] == 'Easy'){
-                            moleAnimDelay = 450;
+                            moleAnimDelay = 350;
                         } else if(data['niveau'] == 'Medium'){
-                            moleAnimDelay = 375;
-                        } else{
                             moleAnimDelay = 300;
+                        } else{
+                            moleAnimDelay = 250;
                         }
                         molePopping(hole, moleAnimDelay);
                     }
